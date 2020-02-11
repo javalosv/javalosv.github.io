@@ -2,7 +2,7 @@
 * Theme Name: Kerge - Responsive vCard
 * Author: lmpixels
 * Author URL: http://themeforest.net/user/lmpixels
-* Version: 2.2.1
+* Version: 2.4.1
 */
 
 var PageTransitions = (function ($, options) {

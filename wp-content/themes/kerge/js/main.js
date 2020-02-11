@@ -2,12 +2,29 @@
 * Template Name: Kerge - Responsive vCard WordPress Theme
 * Author: lmpixels
 * Author URL: http://themeforest.net/user/lmpixels
-* Version: 2.2.1
+* Version: 2.4.1
 */
 
 (function($) {
 "use strict";
     var body = $('body');
+
+    function imageCarousel() {
+        $('.portfolio-page-carousel').each(function() {
+            $(this).imagesLoaded(function () {
+                $('.portfolio-page-carousel').owlCarousel({
+                    smartSpeed:1200,
+                    items: 1,
+                    loop: true,
+                    dots: true,
+                    nav: true,
+                    navText: false,
+                    autoHeight: true,
+                    margin: 10
+                });
+            });
+        });
+    }
 
     // Ajax Pages loader
     function ajaxLoader() {
@@ -36,19 +53,7 @@
                 var toLoad =  $(this).attr('href') + '?ajax=true';
                 showContent();
                 ajaxLoadedContent.load(toLoad, function() {
-                    // Ajax Loaded Page Scroll
-                    $('.portfolio-page-carousel').imagesLoaded(function () {
-                        $('.portfolio-page-carousel').owlCarousel({
-                            smartSpeed:1200,
-                            items: 1,
-                            loop: true,
-                            dots: true,
-                            nav: true,
-                            navText: false,
-                            autoHeight: true,
-                            margin: 10
-                        });
-                    });
+                    imageCarousel();
 
                     var $gallery_container = $("#portfolio-gallery-grid");
                     $gallery_container.imagesLoaded(function () {
@@ -246,6 +251,8 @@
                 margin: 10
             });
         });
+
+        imageCarousel();
 
         // Blog grid init
         var $container = $(".blog-masonry");

@@ -9,5 +9,5 @@
 .fw-accordion .fw-accordion-title.ui-state-active .ui-icon {top: 23px;}
 .fw-accordion .fw-accordion-title.ui-state-active .ui-icon:before {content: "";}
 .fw-accordion .fw-accordion-content {padding: 0;}
-.fw-accordion .fw-accordion-content > p {padding: 0 30px 20px 30px;}
+.fw-accordion .fw-accordion-content > div {padding: 0 30px 20px 30px;}
 .fw-accordion .fw-accordion-content p:last-child {margin-bottom: 0;}
